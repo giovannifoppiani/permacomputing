@@ -1,0 +1,196 @@
+
+import json
+
+# Create projects.json with your actual projects
+projects_data = {
+    "projects": [
+        {
+            "year": "2025",
+            "title": "Amplify Social Initiatives",
+            "discipline": "Co-design workshop",
+            "collaboration": "Università Iuav di Venezia"
+        },
+        {
+            "year": "2025",
+            "title": "The impact of the internet",
+            "discipline": "Editorial",
+            "collaboration": "Graphic Days Torino"
+        },
+        {
+            "year": "2024",
+            "title": "Nessi. Appunti per l'ecosistema dell'università",
+            "discipline": "Editorial",
+            "collaboration": "Gianni Sinni, Irene Sgarro"
+        },
+        {
+            "year": "2024",
+            "title": "Balkan bike trip",
+            "discipline": "Photography",
+            "collaboration": "elsewhere, Veloplus"
+        },
+        {
+            "year": "2024",
+            "title": "WDW Workshop: Design per l'emergenza",
+            "discipline": "Workshop",
+            "collaboration": "Università Iuav di Venezia"
+        },
+        {
+            "year": "2024",
+            "title": "Modello web per imprese sociali",
+            "discipline": "Digital platform",
+            "collaboration": "Università Iuav di Venezia"
+        },
+        {
+            "year": "2024",
+            "title": "Waste driven UI",
+            "discipline": "Workshop",
+            "collaboration": "CTRL+JUNK LAB, Università Iuav di Venezia"
+        },
+        {
+            "year": "2024",
+            "title": "Communicare la sostenibilità",
+            "discipline": "Communication, Workshop",
+            "collaboration": "Studio Visuale, Fondazione IUAV"
+        },
+        {
+            "year": "2024",
+            "title": "Criticity sustainable platform",
+            "discipline": "Web design, UX/UI",
+            "collaboration": "Criticity"
+        },
+        {
+            "year": "2023",
+            "title": "Corte te",
+            "discipline": "Workshop",
+            "collaboration": "Criticity"
+        },
+        {
+            "year": "2023",
+            "title": "Urban parasitism",
+            "discipline": "Workshop",
+            "collaboration": "Criticity"
+        },
+        {
+            "year": "2022",
+            "title": "get lost, elsewhere",
+            "discipline": "Digital video, Photography",
+            "collaboration": "Founder"
+        },
+        {
+            "year": "2021",
+            "title": "Thijs Verhaar.nl",
+            "discipline": "Web design",
+            "collaboration": "Knitwear Lab (NL)"
+        },
+        {
+            "year": "2021",
+            "title": "Out of blue",
+            "discipline": "Digital knitting",
+            "collaboration": "Knitwear Lab (NL)"
+        },
+        {
+            "year": "2021",
+            "title": "Iisalmi Nature campus",
+            "discipline": "Branding",
+            "collaboration": "Savonia University (FI)"
+        },
+        {
+            "year": "2021",
+            "title": "Sperimentale. Pratico. Interdisciplinare.",
+            "discipline": "Digital video",
+            "collaboration": "ISIA Firenze"
+        },
+        {
+            "year": "2021",
+            "title": "Flexible Visual Identity: ISIA Student Show",
+            "discipline": "Branding",
+            "collaboration": "ISIA Firenze"
+        },
+        {
+            "year": "2021",
+            "title": "Best waste, no waste",
+            "discipline": "Service design",
+            "collaboration": "Alia Toscana, ISIA Firenze"
+        },
+        {
+            "year": "2021",
+            "title": "Dubhe Album Art cover",
+            "discipline": "Art cover",
+            "collaboration": "NotMe"
+        },
+        {
+            "year": "2021",
+            "title": "P.O.G.O.",
+            "discipline": "Art cover",
+            "collaboration": "-"
+        },
+        {
+            "year": "2020",
+            "title": "Don't consider it waste.",
+            "discipline": "Digital video, Photography",
+            "collaboration": "Rifo-Lab"
+        },
+        {
+            "year": "2020",
+            "title": "No Black Friday • Do we really need it?",
+            "discipline": "Digital campaign",
+            "collaboration": "Rifo-Lab"
+        },
+        {
+            "year": "2020",
+            "title": "Recycled clothes - EP.1-2-3",
+            "discipline": "Digital video, Photography",
+            "collaboration": "Rifo-Lab, Museo del tessuto"
+        },
+        {
+            "year": "2020",
+            "title": "Sagra Sonora Festival",
+            "discipline": "Event design",
+            "collaboration": "Comune di Vaglia, Flash Operatori"
+        },
+        {
+            "year": "2020",
+            "title": "Etichetta trasparente",
+            "discipline": "Branding",
+            "collaboration": "Oxfam Italia"
+        },
+        {
+            "year": "2020",
+            "title": "There is no plan bee",
+            "discipline": "Editorial",
+            "collaboration": "Fondazione Eni Enrico Mattei"
+        },
+        {
+            "year": "2020",
+            "title": "Bauhaus100",
+            "discipline": "Editorial",
+            "collaboration": "ISIA Firenze"
+        },
+        {
+            "year": "2019",
+            "title": "FLOG",
+            "discipline": "Photography",
+            "collaboration": "Aida band"
+        },
+        {
+            "year": "2019",
+            "title": "Comunicare l'economia",
+            "discipline": "Editorial",
+            "collaboration": "ISIA Firenze"
+        },
+        {
+            "year": "2019",
+            "title": "JotTheDate app",
+            "discipline": "App, Digital",
+            "collaboration": "iStartApp"
+        }
+    ]
+}
+
+with open('projects.json', 'w', encoding='utf-8') as f:
+    json.dump(projects_data, f, ensure_ascii=False, indent=2)
+
+print("✓ Created projects.json")
+print(f"  - {len(projects_data['projects'])} projects included")
+print("  - Chronologically organized (newest first)")
+print("  - Properly formatted JSON")
